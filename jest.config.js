@@ -1,4 +1,5 @@
 module.exports = {
-  textEnvironment: "node",
+  preset: "ts-jest",
+  testEnvironment: "node",
   verbose: true,
 };
