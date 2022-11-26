@@ -12,7 +12,7 @@ function luckyDraw(player) {
   });
 }
 
-//commentato per esercizio
+//commentato per esercizio 12
 // let promise = luckyDraw("Joe");
 
 // promise
