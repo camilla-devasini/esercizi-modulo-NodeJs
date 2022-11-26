@@ -1,0 +1,24 @@
+{
+  "name": "esercizi-modulo-nodejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilla-devasini/esercizi-modulo-NodeJs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camilla-devasini/esercizi-modulo-NodeJs/issues"
+  },
+  "homepage": "https://github.com/camilla-devasini/esercizi-modulo-NodeJs#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "figlet": "^1.5.2"
+  }
+}

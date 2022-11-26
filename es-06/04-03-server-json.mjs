@@ -3,8 +3,7 @@
 //Run the server and make a request to it with curl using the --verbose flag.
 // What is the value of the Content-Length response header?
 
-//Content-Length: 19
-
+//Content-Length: 19;
 
 import { createServer } from "node:http";
 
