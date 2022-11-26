@@ -4,7 +4,7 @@ function luckyDraw(player) {
 
     process.nextTick(() => {
       if (win) {
-        resolve(console.log(`${player} won a prize in the draw!`));
+        resolve(`${player} won a prize in the draw!`);
       } else {
         reject(new Error(`${player} lost the draw.`));
       }
@@ -12,13 +12,16 @@ function luckyDraw(player) {
   });
 }
 
-let promise = luckyDraw("Joe");
+//commentato per esercizio
+// let promise = luckyDraw("Joe");
 
-promise
-  .then(() => {
-    return luckyDraw("Caroline");
-  })
-  .then(() => {
-    return luckyDraw("Sabrina");
-  })
-  .catch((err) => console.log(err));
+// promise
+//   .then(() => {
+//     return luckyDraw("Caroline");
+//   })
+//   .then(() => {
+//     return luckyDraw("Sabrina");
+//   })
+//   .catch((err) => console.log(err));
+
+module.exports = luckyDraw;
