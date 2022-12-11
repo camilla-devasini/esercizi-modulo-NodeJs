@@ -1,4 +1,6 @@
 import { PrismaClient } from "@prisma/client";
+import express from "express";
+import "express-async-errors";
 
 const prisma = new PrismaClient();
 
@@ -9,14 +11,14 @@ async function run() {
         name: "Milano",
         european: true,
         country: "Italy",
-        nhabitants: "1352000",
+        inhabitans: 1352000,
         region: "Lombardia",
       },
       {
         name: "Londra",
         european: false,
         country: "United Kingdom",
-        inhabitants: "8982000",
+        inhabitans: 8982000,
         region: null,
       },
     ],
@@ -26,3 +28,11 @@ async function run() {
 }
 
 run();
+
+const app = express();
+app.get("/cities", async (request, response) => {
+  const cities = await prisma.city.findMany();
+  response.json(cities);
+});
+
+export default app;

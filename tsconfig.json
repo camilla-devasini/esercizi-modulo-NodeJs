@@ -1,9 +1,11 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
-  //   "compilerOptions": {
-  //     // "outDir": "./dist",
-  //     "sourceMap": true
-  //   },
-  "include": ["./es-13/**/*.ts"],
-  "exclude": ["./es-13/**/*.test.ts"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    // "outDir": "./dist",
+    "sourceMap": true
+  },
+  "include": ["./es-16/**/*.ts"],
+  "exclude": ["./es-16/**/*.test.ts"]
 }
