@@ -2,14 +2,14 @@ import express from "express";
 import "express-async-errors";
 import cors from "cors";
 
-import prisma from "./src/lib/prisma/client";
+import prisma from "./lib/prisma/client";
 
 import {
   validate,
   validationErrorMiddleware,
   citySchema,
   CityData,
-} from "./src/lib/validation";
+} from "./lib/validation";
 
 const app = express();
 

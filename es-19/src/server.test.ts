@@ -1,4 +1,4 @@
-import { prismaMock } from "./src/lib/prisma/client.mock";
+import { prismaMock } from "./lib/prisma/client.mock";
 
 import app from "./app";
 import supertest from "supertest";

@@ -13,4 +13,4 @@ export const citySchema = Type.Object(
 );
 
 export type CityData = Static<typeof citySchema>;
-//we have inferred a planetData type that can be used in our code.
+//we have inferred a CityData type that can be used in our code.
