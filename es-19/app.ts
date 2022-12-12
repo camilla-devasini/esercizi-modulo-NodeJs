@@ -8,7 +8,7 @@ import {
   validationErrorMiddleware,
   citySchema,
   CityData,
-} from "./src/lib/validation";
+} from "./validation";
 
 const app = express();
 
