@@ -3,6 +3,7 @@ import { Validator, ValidationError } from "express-json-validator-middleware";
 import { ErrorRequestHandler } from "express";
 
 const validator = new Validator({});
+
 addFormats(validator.ajv, ["date-time"])
   .addKeyword("kind")
   .addKeyword("modifier");
@@ -19,9 +20,11 @@ export const validationErrorMiddleware: ErrorRequestHandler = (
     response.status(422).send({
       errors: error.validationErrors,
     });
+
     next();
   } else {
-    next(error); //default error middleware
+    next(error);
   }
 };
+
 export * from "./cities";
