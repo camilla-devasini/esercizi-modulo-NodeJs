@@ -1,5 +1,6 @@
 import express from "express";
 import "express-async-errors";
+import cors from "cors";
 
 import prisma from "./src/lib/prisma/client";
 
@@ -8,11 +9,15 @@ import {
   validationErrorMiddleware,
   citySchema,
   CityData,
-} from "./validation";
+} from "./src/lib/validation";
 
 const app = express();
 
 app.use(express.json());
+const corsOptions = {
+  origin: "http://localhost:8080",
+};
+app.use(cors(corsOptions));
 
 // API get all cities
 app.get("/cities", async (request, response) => {

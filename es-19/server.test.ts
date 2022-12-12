@@ -29,7 +29,8 @@ describe("POST /cities", () => {
         inhabitans: "1232000",
       })
       .expect(201)
-      .expect("Content-Type", /application\/json/);
+      .expect("Content-Type", /application\/json/)
+      .expect("Access-Control-Allow-Origin", "http://localhost:8080");
 
     expect(response.body).toEqual(city);
   });
@@ -71,7 +72,8 @@ describe("GET /cities/:id", () => {
     const response = await request
       .get("/cities/1")
       .expect(200)
-      .expect("Content-Type", /application\/json/);
+      .expect("Content-Type", /application\/json/)
+      .expect("Access-Control-Allow-Origin", "http://localhost:8080");
 
     expect(response.body).toEqual(city);
   });
@@ -110,7 +112,8 @@ describe("PUT /cities/:id", () => {
         inhabitans: 100000,
       })
       .expect(200)
-      .expect("Content-Type", /application\/json/);
+      .expect("Content-Type", /application\/json/)
+      .expect("Access-Control-Allow-Origin", "http://localhost:8080");
 
     expect(response.body).toEqual(city);
   });
@@ -182,7 +185,8 @@ describe("DELETE /city/:id", () => {
     const response = await request
       .delete("/cities/100")
       .expect(404)
-      .expect("Content-Type", /text\/html/);
+      .expect("Content-Type", /text\/html/)
+      .expect("Access-Control-Allow-Origin", "http://localhost:8080");
 
     expect(response.text).toContain("Cannot DELETE /cities/23");
   });

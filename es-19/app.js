@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 require("express-async-errors");
 const client_1 = __importDefault(require("./src/lib/prisma/client"));
-const validation_1 = require("./validation");
+const validation_1 = require("./src/lib/validation");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 // API get all cities
