@@ -4,8 +4,8 @@
     "test": "jest",
     "build": "tsc",
     "build:dev": "tsc --watch",
-    "start": "node --enable-source-maps es-18/server.js",
-    "start:dev": "nodemon --watch es-18/ --watch .env",
+    "start": "node --enable-source-maps dist/server.js",
+    "start:dev": "nodemon --watch dist/ --watch .env",
     "dev": "npm run build && concurrently 'npm:build:dev' 'npm:start:dev'"
   },
   "engines": {
