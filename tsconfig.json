@@ -6,6 +6,6 @@
     // "outDir": "./dist",
     "sourceMap": true
   },
-  "include": ["./es-17/**/*.ts"],
-  "exclude": ["./es-17/**/*.test.ts"]
+  "include": ["./es-18/**/*.ts"],
+  "exclude": ["./es-18/**/*.test.ts"]
 }
