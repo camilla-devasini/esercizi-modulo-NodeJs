@@ -17,6 +17,7 @@ model city {
   country     String
   region      String?
   inhabitans  Int
+  photoFilename String?   @db.VarChar(255)
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
 

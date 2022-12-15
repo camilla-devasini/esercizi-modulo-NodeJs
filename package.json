@@ -6,7 +6,8 @@
     "build:dev": "tsc --watch",
     "start": "node --enable-source-maps dist/server.js",
     "start:dev": "nodemon --watch dist/ --watch .env",
-    "dev": "npm run build && concurrently 'npm:build:dev' 'npm:start:dev'"
+    "dev": "npm run build && concurrently 'npm:build:dev' 'npm:start:dev'",
+    "web": "serve -p 8080 es-20/web/"
   },
   "engines": {
     "node": ">=16"
@@ -21,8 +22,10 @@
   "homepage": "https://github.com/camilla-devasini/esercizi-modulo-NodeJs#readme",
   "devDependencies": {
     "@tsconfig/node18": "^1.0.1",
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.14",
     "@types/jest": "^29.2.3",
+    "@types/mime": "^3.0.1",
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.11.9",
     "@types/supertest": "^2.0.12",
@@ -38,12 +41,16 @@
   "dependencies": {
     "@prisma/client": "^4.6.1",
     "@sinclair/typebox": "^0.25.13",
+    "@types/multer": "^1.4.7",
     "ajv-formats": "^2.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "express-json-validator-middleware": "^3.0.1",
-    "figlet": "^1.5.2"
+    "figlet": "^1.5.2",
+    "mime": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "serve": "^14.1.2"
   }
 }

@@ -3,7 +3,11 @@ module.exports = {
   testEnvironment: "node",
   verbose: true,
   clearMocks: true,
-  setupFilesAfterEnv: ["./src/lib/prisma/client.mock.ts"],
+  setupFilesAfterEnv: [
+    "./es-20/src/lib/prisma/client.mock.ts",
+    "./es-20/src/lib/middleware/multer.mock.ts",
+  ],
+
   transform: {
     "^.+\\.ts?$": "ts-jest",
   },
