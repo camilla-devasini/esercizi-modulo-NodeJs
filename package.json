@@ -7,7 +7,7 @@
     "start": "node --enable-source-maps dist/server.js",
     "start:dev": "nodemon --watch dist/ --watch .env",
     "dev": "npm run build && concurrently 'npm:build:dev' 'npm:start:dev'",
-    "web": "serve -p 8080 es-20/web/"
+    "web": "serve -p 8080 es-21/web/"
   },
   "engines": {
     "node": ">=16"
