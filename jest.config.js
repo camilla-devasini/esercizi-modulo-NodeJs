@@ -4,8 +4,9 @@ module.exports = {
   verbose: true,
   clearMocks: true,
   setupFilesAfterEnv: [
-    "./es-21/src/lib/prisma/client.mock.ts",
-    "./es-21/src/lib/middleware/multer.mock.ts",
+    "./es-22/src/lib/prisma/client.mock.ts",
+    "./es-22/src/lib/middleware/multer.mock.ts",
+    "./es-22/src/lib/middleware/passport.mock.ts",
   ],
 
   transform: {

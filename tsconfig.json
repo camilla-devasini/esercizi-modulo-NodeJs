@@ -6,6 +6,6 @@
     "outDir": "./dist",
     "sourceMap": true
   },
-  "include": ["./**/src/*.ts"],
+  "include": ["./**/src/*.ts", "es-21/src/routes/server.test.ts"],
   "exclude": ["./**/src/*.test.ts"]
 }
